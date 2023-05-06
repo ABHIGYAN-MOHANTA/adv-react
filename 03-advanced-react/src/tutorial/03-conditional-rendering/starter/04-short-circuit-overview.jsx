@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const ShortCircuitOverview = () => {
-  return <h2>short circuit overview</h2>;
+  //falsy
+  const [text, setText] = useState("");
+  //truthy
+  const [name, setName] = useState("alexa");
+  return (
+    <div>
+      <h2>{text || name}</h2>
+    </div>
+  );
 };
 export default ShortCircuitOverview;
